@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+      title: "Application",
+      home: Scaffold(
+        backgroundColor : Colors.amberAccent,
+        appBar: AppBar(
+          title: Text("Day2"),
+          leading: Icon(Icons.home),
+          backgroundColor: Colors.black,
+        ),
+          body : Container(
+            alignment : Alignment.center,
+            height: 100,
+            width: 100,
+            margin: EdgeInsetsDirectional.all(50),
+           padding: EdgeInsets.all(20),
+           child : Text("Hey coders!"),
+            decoration: BoxDecoration(
+              border: Border.all(width: 3 , color: Colors.black),
+              color: Colors.greenAccent,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.greenAccent, offset: Offset(2.0,2.0),
+                ),
+              ]
+            ),
+          transform: Matrix4.rotationZ(0.2),
+      ),
+      ),
+
+    );
+  }
+
+
+}
