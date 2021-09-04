@@ -1,0 +1,42 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Application",
+      home: Scaffold(
+        backgroundColor: Colors.amberAccent,
+        appBar: AppBar(
+          title: Text("Column"),
+          leading: Icon(Icons.home),
+          backgroundColor: Colors.black,
+        ),
+        body: Center(
+          child: Text(
+            "Helloooooooooooo!",
+            style: TextStyle(
+                color: Colors.pink,
+                fontSize: 30,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+                shadows: [Shadow(
+                  color: Colors.lightBlue, offset: Offset(1.0, 1.0),
+                ),
+                ]
+
+            ),
+          ),
+        ),
+      ),
+
+    );
+  }
+
+
+}
