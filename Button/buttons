@@ -1,0 +1,121 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Application",
+      home: Scaffold(
+        backgroundColor: Colors.lightGreenAccent,
+        appBar: AppBar(
+          title: Text(" Portfolio "),
+          backgroundColor: Colors.black,
+        ),
+        body: Column(
+          children: [
+            Center(
+              child: Container(
+                margin: EdgeInsets.only(top: 20),
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.lightBlueAccent,
+                  border: Border.all( color: Colors.white, width: 2),
+                ),
+                child: Center(
+                  child: Text("P" , style: TextStyle(
+                    fontSize: 80,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                  ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 50, right: 50 , left: 50),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                borderRadius: BorderRadius.circular(20),
+              ),
+                child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Pragya Mittal",
+                      icon: Icon(Icons.person , color: Colors.white,),
+
+                    ),
+                  ),
+    ),
+              ),
+            Container(
+              margin: EdgeInsets.only(left: 50, right: 50 , top: 10),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Password",
+                    icon: Icon(Icons.lock , color: Colors.white),
+
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 50 , right: 50 , top: 10),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Github",
+                    icon: Icon(Icons.link , color: Colors.white),
+
+                  ),
+                ),
+              ),
+            ),
+            RaisedButton(
+                child: Text( "UPDATE", style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                ),),
+                onPressed: null,
+            ),
+            FloatingActionButton(
+              child: Icon(Icons.save),
+              onPressed: null,
+              backgroundColor: Colors.greenAccent ,
+              foregroundColor: Colors.black,
+            ),
+            FloatingActionButton.extended(onPressed: null , label: Text("Save"), icon: Icon(Icons.save),)
+              ]
+        )
+
+            ),
+        );
+
+  }
+
+
+}
