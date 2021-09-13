@@ -1,0 +1,41 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Image';
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text("Image"),
+          backgroundColor: Colors.pinkAccent,
+
+        ),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 10.0 , left: 40),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                   Column(
+                     children: [
+                       Image.network("https://th.bing.com/th/id/OIP.IREe027_VyQFZnlwedTCvgHaEo?w=288&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7" , width: 300, height: 250,),
+                       Image.network("https://th.bing.com/th/id/OIP.prU1zPW6ChLeSL_B7ddfjgHaE8?w=251&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7" , width: 350, height: 350,),
+                     ],
+                   ),
+
+                  ],
+                ),
+            ),
+          ),
+        );
+
+
+  }
+}
+
+
