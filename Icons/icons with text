@@ -1,0 +1,54 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Icons';
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(appTitle),
+          backgroundColor: Colors.black,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Icon(
+                      Icons.home ,
+                      size: 50,
+                      color: Colors.indigo,
+                      textDirection: TextDirection.rtl,
+                    ),
+                    Text("Home"),
+                        Icon(
+                          Icons.lock_clock,
+                          size: 50,
+                          color: Colors.red,
+                          textDirection: TextDirection.rtl,
+                        ),
+                          Text("Alarm"),
+                    Icon(
+                      Icons.date_range,
+                      size: 50,
+                      color: Colors.pink,
+                      textDirection: TextDirection.rtl,
+                    ),
+                    Text("Date"),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        )
+      );
+
+  }
+}
