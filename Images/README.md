@@ -6,3 +6,4 @@
 #### Image.network
 * When image is uploaded directly from the link.
 
+![image network](https://user-images.githubusercontent.com/69578414/133330508-6f03e6dc-b60c-4e1a-bffb-7f3cbeabcea8.PNG)
