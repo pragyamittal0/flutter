@@ -1,1 +1,146 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+
+
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Card';
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Text("Drawer"),
+          backgroundColor: Colors.pinkAccent,
+        ),
+        drawer: Drawer(
+               child: ListView(
+                 padding: EdgeInsets.all(10),
+                 children: [
+                   UserAccountsDrawerHeader(accountName: Text("Pragya Mittal"), accountEmail: Text("pragyamittal@gmail.com"),
+                   currentAccountPicture: CircleAvatar(
+                     backgroundColor: Colors.black,
+                     child: Container(
+                         width: 60,
+                         height: 60,
+                         decoration: BoxDecoration(
+                           color: Colors.black,
+                           borderRadius: BorderRadius.circular(100),
+                           image: DecorationImage(
+                             image: AssetImage("assets/pragya.jpeg",),
+                             fit: BoxFit.cover,
+                           )
+                         ),
+                     ),
+                   ),
+                   ),
+                   ListTile(
+                     leading: Icon(Icons.home),
+                     title: Text("Home"),
+                   ),
+                   ListTile(
+                     leading: Icon(Icons.local_grocery_store),
+                     title: Text("Store"),
+                   ),
+                   ListTile(
+                     leading: Icon(Icons.settings),
+                     title: Text("Settings"),
+                   ),
+                 ],
+               ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(1.0),
+            child: Center(
+                     child: Container(
+                       height: 150,
+                       width: 300,
+                       child: Card(
+                         color: Colors.lightGreenAccent,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(50),
+                         ),
+                         elevation: 10,
+                         shadowColor: Colors.pinkAccent,
+                         child: Column(
+                           mainAxisSize: MainAxisSize.min,
+                           children: [
+                             Padding(
+                               padding: const EdgeInsets.all(1.0),
+                               child: ListTile(
+                                 leading:Icon(Icons.person, size: 30, color: Colors.pinkAccent,),
+                                 title: Text("Pragya Mittal" , style: TextStyle(
+                                   fontWeight: FontWeight.bold,
+                                   fontStyle: FontStyle.italic,
+                                 ),),
+                                 subtitle: Text("Student"),
+                               ),
+                             ),
+                             ButtonBar(
+                               children: [
+                                 Padding(
+                                   padding: const EdgeInsets.only(right: 15),
+                                   child: ElevatedButton(
+                                       onPressed: null,
+                                       child: Text("Contact" , style: TextStyle(
+                                         fontSize: 15,
+                                         fontStyle: FontStyle.italic,
+                                       ),),
+                                   ),
+                                 ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 8.0),
+                                    child: ElevatedButton(
+                                     onPressed: null,
+                                     child: Icon(
+                                       (Icons.location_on),
+                                     )
+
+
+                                 ),
+                                  ),
+
+                               ],
+
+                             )
+                           ],
+                         ),
+                       ),
+                     ),
+                   ),
+
+
+
+
+
+                ),
+            ),
+          );
+  }
+}
+class HomePage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Center(
+           child: Text("Welcome" , style: TextStyle(
+            color: Colors.indigo,
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
+    ),),
+    ),
+      ],
+      
+      
+    );
+  }
+}
+
+
 
