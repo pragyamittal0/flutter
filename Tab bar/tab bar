@@ -1,1 +1,83 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Card';
+    return MaterialApp(
+      title: appTitle,
+      home: DefaultTabController(
+          length: 3,
+          child: Scaffold(
+              backgroundColor: Colors.white,
+              appBar: AppBar(
+                  title: Text("TabBar"),
+                  backgroundColor: Colors.brown,
+                  bottom: TabBar(
+                    tabs: [
+                      Tab(icon: Icon(Icons.home_outlined), text: "Home",),
+                      Tab(icon: Icon(Icons.settings), text: "Settings",),
+                      Tab(icon: Icon(Icons.search), text: "Search",),
+                    ],
+
+                  )
+              ),
+              body: TabBarView(
+              children: [
+                HomePage(),
+                SettingsPage(),
+                HomePage(),
+              ],
+          ),
+          ),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+         child: Text(
+            "WELCOME" , style: TextStyle(
+            color: Colors.pink,
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+          ),
+          )
+
+      ),
+    );
+  }
+}
+
+class SettingsPage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        child:
+            Text(
+              "Settings" , style: TextStyle(
+              color: Colors.pink,
+              fontSize: 40,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
+            )
+
+        ),
+      );
+
+  }
+}
 
