@@ -1,0 +1,70 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Card';
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AlertWidget(),
+    );
+  }
+}
+   class AlertWidget extends StatelessWidget {
+       TextEditingController _textEditingController = new TextEditingController();
+
+     @override
+     Widget build(BuildContext context) {
+       return Scaffold(
+         body: Center(
+           child: Container(
+             child: ElevatedButton(
+               child: Text("Alert"),
+               onPressed: () async {
+                 final field fieldatt = await confirmdalertdialogwidget(context);
+                 print("User selection $fieldatt");
+
+               },
+
+             ),
+           ),
+         ),
+
+       );
+     }
+   }
+enum field {Confirm , Accept}
+Future<field> confirmdalertdialogwidget (BuildContext context) async  {
+  showDialog<field>(context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context){
+      return AlertDialog(
+        title: Text("Text Field"),
+        content: Text("This is for notification!!"),
+        actions: [
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context).pop(field.Confirm);
+            },
+            child: Text("Cancel"),
+            color: Colors.lightGreenAccent,
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context).pop(field.Accept);
+            },
+            child: Text("Accept"),
+            color: Colors.lightGreenAccent,
+          ),
+        ],
+
+      );
+
+    },
+  );
+}
+
