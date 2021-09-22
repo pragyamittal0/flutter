@@ -3,3 +3,7 @@
 * Long List
 ### Simple List
 ![list](https://user-images.githubusercontent.com/69578414/134225661-50b3c019-788a-43aa-9764-625c45b41044.PNG)
+
+### Long List
+![long list](https://user-images.githubusercontent.com/69578414/134378091-7f460df7-ae03-49d4-ada5-b1164ed0eb69.PNG)
+
