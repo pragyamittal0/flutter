@@ -10,3 +10,9 @@
 
 ### Grid View
 ![grid](https://user-images.githubusercontent.com/69578414/134395919-0053fc3e-e336-4ff0-81bf-d9f05202bc57.PNG)
+
+### Horizontal List
+![horizontal](https://user-images.githubusercontent.com/69578414/134405266-3f47cd59-8095-436f-bccc-4db6fbe3f25d.PNG)
+![hlist](https://user-images.githubusercontent.com/69578414/134405297-deefc458-7d28-4474-8d2d-130a2e641232.PNG)
+
+
