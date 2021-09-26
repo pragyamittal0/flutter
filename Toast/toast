@@ -1,1 +1,48 @@
+// @dart=2.9
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+void main(){
+  runApp(MyApp());
+
+}
+class MyApp extends StatelessWidget {
+  //const MyApp({Key? key}) : super(key: key);
+void showtoast(){
+   Fluttertoast.showToast(msg:"This is notification bar",
+     toastLength: Toast.LENGTH_SHORT,
+     gravity: ToastGravity.BOTTOM,
+     timeInSecForIosWeb: 1,
+     backgroundColor: Colors.pinkAccent,
+     textColor: Colors.purple,
+   );
+}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+       home: Scaffold(
+         appBar: AppBar(
+           title: Text("GridView"),
+           backgroundColor: Colors.lightBlueAccent,
+         ),
+         body: Container(
+           child: Center(
+             child: RaisedButton(
+                 onPressed: (){
+                   showtoast();
+                 },
+               child: Text("This is Toast"),
+               color: Colors.amberAccent,
+             ),
+           ),
+         )
+
+
+
+       ),
+    );
+  }
+}
 
