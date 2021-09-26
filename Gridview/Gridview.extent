@@ -1,1 +1,70 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+
+void main(){
+  runApp(MyApp());
+
+}
+class MyApp extends StatelessWidget {
+  //const MyApp({Key? key}) : super(key: key);
+       
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+       home: Scaffold(
+         appBar: AppBar(
+           title: Text("GridView"),
+           backgroundColor: Colors.black12,
+         ),
+         body: GridView.extent(
+             maxCrossAxisExtent: 250,
+           crossAxisSpacing: 10.0,
+           primary: null,
+           padding: EdgeInsets.all(8.0),
+           children: [
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.5SjKih2sQZ_ysAcRIOzJhgHaEo?w=260&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.5SjKih2sQZ_ysAcRIOzJhgHaEo?w=260&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+             Container(
+               child: Image.network("https://th.bing.com/th/id/OIP.SRWiDbK6HEikgEyC0LsCWwHaEo?w=315&h=197&c=7&r=0&o=5&dpr=1.09&pid=1.7", width: 350, height: 500,),
+             ),
+           ],
+         ),
+
+       ),
+    );
+  }
+}
 
