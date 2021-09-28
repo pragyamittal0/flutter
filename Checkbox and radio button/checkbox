@@ -1,1 +1,108 @@
+// @dart=2.9
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
+
+void main(){
+  runApp(MyApp());
+
+}
+class MyApp extends StatefulWidget {
+  const MyApp({Key key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool firstbox = false;
+  bool secondbox = false;
+  bool thirdbox = false;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Radio Button and checkbox"),
+            backgroundColor: Colors.lightBlueAccent,
+          ),
+          body: Container(
+            padding: EdgeInsets.all(10),
+              child: Column(
+                  children: [
+                  Row(
+                    children: [
+                      Text("Hobby:", style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.purple,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ],
+                  ),
+                    Row(
+                      children: [
+                        Text("Painting"),
+                        Checkbox(
+                          value: this.firstbox,
+                          onChanged: (bool value){
+                            setState(() {
+                              this.firstbox = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("Reading"),
+                        Checkbox(
+                          activeColor : Colors.pink,
+                          value: this.secondbox,
+                          onChanged: (bool value){
+                            setState(() {
+                              this.secondbox = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("Singing"),
+                        Checkbox(
+                          checkColor: Colors.cyanAccent,
+                          value: this.thirdbox,
+                          onChanged: (bool value){
+                            setState(() {
+                              this.thirdbox = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("Dancing"),
+                        Checkbox(
+                          checkColor: Colors.black,
+                          hoverColor: Colors.pinkAccent,
+                          value: this.firstbox,
+                          onChanged: (bool value){
+                            setState(() {
+                              this.firstbox = value;
+                            });
+                          },
+                        ),
+                      ],
+                    )
+                  ]
+              )
+          )
+
+
+      ),
+    );
+  }
+
+}
