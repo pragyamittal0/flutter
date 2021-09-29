@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: tooltip_widget()
+    );
+  }
+}
+
+class tooltip_widget extends StatelessWidget {
+  const tooltip_widget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        child: Tooltip(
+          message: "Set Alarm",
+          showDuration: Duration(seconds: 3),
+          waitDuration: Duration(milliseconds: 2),
+          textStyle: TextStyle(
+            fontSize: 15,
+            color: Colors.yellow,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: FlatButton(
+            onPressed: null,
+            child: Icon(Icons.alarm , size: 50,),
+          ) ,
+        ),
+      ),
+    );
+  }
+}
