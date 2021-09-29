@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ImageSlider(),
+    );
+  }
+}
+
+class ImageSlider extends StatelessWidget {
+  const ImageSlider({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      child: imageslider(context),
+    );
+  }
+}
+Swiper imageslider(BuildContext context){
+  return new Swiper(
+    autoplay: true,
+    itemCount: 10,
+    itemBuilder: (BuildContext context , int index){
+      return Image.network(
+        "https://th.bing.com/th/id/OIP.Ix6XjMbuCvoq3EQNgJoyEQHaFj?pid=ImgDet&rs=1",
+
+      );
+    },
+  );
+}
