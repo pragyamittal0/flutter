@@ -1,0 +1,73 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+
+void main(){
+  runApp(MyApp());
+
+}
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+enum Gender{Male,Female}
+class _MyAppState extends State<MyApp> {
+  Gender? gender =Gender.Male;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Radio Button and checkbox"),
+            backgroundColor: Colors.lightBlueAccent,
+          ),
+          body: Container(
+            padding: EdgeInsets.all(10),
+              child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text("Gender:" , style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),),
+                      ],
+                    ),
+                    ListTile(
+                      leading: Radio(
+                        groupValue: gender,
+                        value: Gender.Male,
+                        onChanged: (Gender? value){
+                        setState(() {
+                        this.gender= value;
+                          });
+                      },
+                      ),
+                      title: Text("Male"),
+                    ),
+                    ListTile(
+                      leading: Radio(
+                        groupValue: gender,
+                        value: Gender.Female,
+                        onChanged: (Gender? value){
+                          setState(() {
+                            this.gender= value;
+                          });
+                        },
+                      ),
+                      title: Text("Female"),
+                    ),
+
+           ]
+          )
+
+
+      ),
+      ),
+    );
+  }
+
+}
