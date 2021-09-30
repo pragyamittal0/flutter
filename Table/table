@@ -1,0 +1,126 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: table_widget(),
+    );
+  }
+}
+
+
+class table_widget extends StatefulWidget {
+  const table_widget({Key? key}) : super(key: key);
+
+  @override
+  _table_widgetState createState() => _table_widgetState();
+}
+
+class _table_widgetState extends State<table_widget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.yellow,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text("Table" , style: TextStyle(
+          backgroundColor: Colors.cyanAccent,
+          color: Colors.pink,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 100),
+        child: Container(
+          margin: EdgeInsets.all(50),
+          child: Table(
+            defaultColumnWidth: FixedColumnWidth(100),
+            border: TableBorder.all(
+              color: Colors.blue,
+              width: 3,
+              style: BorderStyle.solid,
+            ),
+            children: [
+              TableRow(
+                children: [
+                  Column(
+                    children: [
+                      Text("Name"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text("Name"),
+                    ],
+
+                  ),
+                  Column(
+                    children: [
+                      Text("Name"),
+                    ],
+
+                  ),
+                ]
+              ),
+              TableRow(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Roll No."),
+                      ],
+
+                    ),
+                    Column(
+                      children: [
+                        Text("Roll No."),
+                      ],
+
+                    ),
+                    Column(
+                      children: [
+                        Text("Roll No."),
+                      ],
+
+                    ),
+                  ]
+              ),
+              TableRow(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Attendance"),
+                      ],
+
+                    ),
+                    Column(
+                      children: [
+                        Text("Attendance"),
+                      ],
+
+                    ),
+                    Column(
+                      children: [
+                        Text("Attendance"),
+                      ],
+
+                    ),
+                  ]
+              ),
+            ],
+          ),
+        ),
+      ),
+
+
+    );
+  }
+}
+
