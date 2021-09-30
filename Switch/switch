@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: switch_widget(),
+    );
+  }
+}
+
+class switch_widget extends StatefulWidget {
+  const switch_widget({Key? key}) : super(key: key);
+
+  @override
+  _switch_widgetState createState() => _switch_widgetState();
+}
+
+class _switch_widgetState extends State<switch_widget> {
+  bool switch_state = false;
+  var textValue = "Switch is OFF";
+  void display_state(bool value){
+    if(switch_state == false){
+      setState(() {
+        switch_state = true;
+        textValue = "Switch is ON";
+      });
+    }
+    else{
+      setState(() {
+        switch_state = false;
+        textValue = "Switch is OFF";
+      });
+  }}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Transform.scale(scale: 2,
+            child: Switch(
+              onChanged: display_state,
+              value: switch_state,
+              activeColor: Colors.green,
+            ),
+            ),
+          ),
+          Center(child: Text('$textValue')),
+        ],
+      )
+    );
+  }
+}
